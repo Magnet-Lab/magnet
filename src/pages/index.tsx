@@ -23,8 +23,8 @@ export default function Home() {
 			<div css={profileArea}>
 				<IconButton
 					ref={buttonRef}
-					id="positioned-demo-button"
-					aria-controls={'positioned-demo-menu'}
+					id="profile-icon-button"
+					aria-controls={'profile-menu'}
 					aria-haspopup="true"
 					aria-expanded={open ? 'true' : undefined}
 					variant="outlined"
@@ -40,7 +40,7 @@ export default function Home() {
 					anchorEl={buttonRef.current}
 					open={open}
 					onClose={handleClose}
-					aria-labelledby="profile-menu-button"
+					aria-labelledby="profile-button"
 					placement="bottom"
 				>
 					<MenuItem onClick={handleClose}>
