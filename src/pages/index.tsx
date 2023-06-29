@@ -10,6 +10,7 @@ import Edit from '@mui/icons-material/Edit'
 import DeleteForever from '@mui/icons-material/DeleteForever'
 import Person from '@mui/icons-material/Person'
 import { useRef, useState } from 'react'
+import PivotList from '@/components/pivotlist'
 
 export default function Home() {
 	const buttonRef = useRef(null)
@@ -63,7 +64,7 @@ export default function Home() {
 				</Menu>
 			</div>
 			<div css={pivotArea}>
-				<h1>Next.js + MUI + Emotion</h1>
+				<PivotList pivid={''} pivotlist={''}  />
 			</div>
 			<div css = {buttonArea}>
 				<h2>Next.js</h2>
