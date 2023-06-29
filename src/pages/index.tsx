@@ -11,6 +11,7 @@ import DeleteForever from '@mui/icons-material/DeleteForever'
 import Person from '@mui/icons-material/Person'
 import { useRef, useState } from 'react'
 import PivotList from '@/components/pivotlist'
+import CreateJoinPivotBtn from '@/components/cjpivotbtn'
 
 export default function Home() {
 	const buttonRef = useRef(null)
@@ -67,7 +68,8 @@ export default function Home() {
 				<PivotList pivid={''} pivotlist={''}  />
 			</div>
 			<div css = {buttonArea}>
-				<h2>Next.js</h2>
+				<CreateJoinPivotBtn path={'/'} text={'CreatePivotBtn'} />
+				<CreateJoinPivotBtn path={'/'} text={'JoinPivotBtn'} />
 			</div>
 		</div>
 	)
@@ -102,4 +104,5 @@ const buttonArea = css`
 	align-items: center;
 	justify-content: center;
 	height: 25vh;
+  gap : 6vw;
 `
