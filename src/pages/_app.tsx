@@ -17,7 +17,9 @@ const mainArea = css`
 	margin: 0 auto;
 
 	@media (width < 440px) {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 		max-width: 100vw;
-		background-color: plum;
 	}
 `

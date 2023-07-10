@@ -35,7 +35,7 @@ export default function Home() {
 						setOpen(!open)
 					}}
 				>
-					<Person />
+					<Person sx={{ fontSize: '5rem' }} />
 				</IconButton>
 				<Menu
 					id="profile-menu"
@@ -65,9 +65,9 @@ export default function Home() {
 				</Menu>
 			</div>
 			<div css={pivotArea}>
-				<PivotList pivid={''} pivotlist={''}  />
+				<PivotList pivid={''} pivotlist={''} />
 			</div>
-			<div css = {buttonArea}>
+			<div css={buttonArea}>
 				<CreateJoinPivotBtn path={'/'} text={'CreatePivotBtn'} />
 				<CreateJoinPivotBtn path={'/'} text={'JoinPivotBtn'} />
 			</div>
@@ -77,19 +77,29 @@ export default function Home() {
 
 const mainArea = css`
 	display: flex;
-  flex-direction: column;
+	flex-direction: column;
 	align-items: center;
-	justify-content: center;
+	justify-content: flex-start;
 	width: 60vw;
-  height: 100vh;
+	height: 100vh;
 	border: 1px solid #ccc;
+
+	@media (max-width: 440px) {
+		border: none;
+	}
 `
 
 const profileArea = css`
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	height: 25vh;
+	height: 15vh;
+	margin-top: 5vh;
+	
+	@media (max-width: 440px) {
+		margin-top: 10vh;
+		height: 15vh;
+	}
 `
 
 const pivotArea = css`
@@ -97,6 +107,10 @@ const pivotArea = css`
 	align-items: center;
 	justify-content: center;
 	height: 25vh;
+
+	@media (max-width: 440px) {
+		height: 15vh;
+	}
 `
 
 const buttonArea = css`
@@ -104,5 +118,10 @@ const buttonArea = css`
 	align-items: center;
 	justify-content: center;
 	height: 25vh;
-  gap : 6vw;
+	margin-top: 5vh;
+	gap: 6vw;
+
+	@media (max-width: 440px) {
+		height: 15vh;
+	}
 `
